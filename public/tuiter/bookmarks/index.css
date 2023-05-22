@@ -1,0 +1,76 @@
+.wd-bm {
+    background-color: white;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-tuit-avatar {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.wd-tuit-image {
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+.wd-bm-head {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.wd-tuit {
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d3d0d0;
+    border-top: none;
+    padding: 12px;
+}
+
+.wd-tuit-dots {
+    float: right;
+}
+
+.wd-tuit a {
+    color: #1b94e0;
+    text-decoration: none;
+}
+ 
+.wd-tuit-first {
+    border-top: 1px solid #d3d0d0;
+    border-bottom: none;
+}
+
+.wd-column-left {
+    width: 60px;
+}
+ 
+.wd-column-right {
+    max-width: 490px;
+    width: 100%;
+    padding-left: 12px;
+}
+
+.wd-tuit-heading {
+    margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.wd-tuit-icon {
+    margin-top: 12px;
+    display: flex;
+}
+
+.wd-tuit-icon-column {
+    padding-left: 12px;
+    width: 20%;
+}
+
+.wd-tuit-icon-num {
+    padding-left: 12px;
+}

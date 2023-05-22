@@ -1,0 +1,161 @@
+.wd-explore-container {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wd-block {
+    max-width: 750px;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-top: none;
+    padding: 12px;
+}
+
+.wd-block-first {
+    border-top: 1px solid lightgray;
+    border-bottom: none;
+}
+
+.wd-block-second {
+    max-width: 750px;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    border-color: lightgray;
+    border-top: none;
+    padding: 12px;
+}
+
+.wd-block-left {
+    width: 80%;
+    padding-left: 12px;
+}
+
+.wd-block-left {
+    width: 80%;
+    padding-left: 12px;
+}
+
+.wd-float-right-gear {
+    float: right;
+    font-weight: bolder;
+    margin-top: 10px;
+    margin-right: 10px;
+} 
+
+.wd-float-right {
+    float: right;
+    font-weight: bolder;
+    top: 23px;
+    left: 30px;
+} 
+
+.wd-search {
+    position: relative;
+}
+
+.wd-icon {
+    position: absolute;
+    top: 23px;
+    left: 23px;
+}
+
+.wd-icon-right {
+    position: absolute;
+    float: right;
+    top: 23px;
+    left: 30px;
+}
+ 
+.wd-search input {
+    background-color: #EEEEEE;
+    height: 40px;
+    padding-left: 40px;
+    width: 90%;
+    border: none;
+    border-radius: 20px;
+}
+
+.wd-nav-ul {
+    list-style-type: none;
+    color: gray;
+    padding-left: 0;
+    border-bottom: 3px solid rgb(0, 106, 255) transparent;
+}
+
+.wd-nav li {
+    display: inline;
+    font-size: 20px;
+    padding: 25px;
+    width: 20%;
+}
+
+.wd-nav-selected {
+    border-bottom: 3px solid rgb(0, 106, 255);
+}
+
+.wd-explore-image-wrapper {
+    position: relative;
+}
+
+.wd-explore-image-overlay {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 2em;
+    color: white;
+    font-weight: bolder;
+}
+
+.wd-tuits-ul {
+    color: gray;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.wd-tuits-body {
+    color: black;
+    font-weight: bold;
+}
+
+.wd-tuit-avatar {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.list-group-item .icon-text {
+    display: flex;
+    align-items: center;
+}
+
+.inline{
+    max-width:400px;
+    margin:auto;
+}
+
+.input-icons i {
+    position: absolute;
+}
+    
+.input-icons {
+    width: 100%;
+    margin-bottom: 10px;
+}
+    
+.icon-search {
+    padding: 10px;
+    min-width: 40px;
+}
+
+.icon {
+    min-width: 40px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 3px;
+}
