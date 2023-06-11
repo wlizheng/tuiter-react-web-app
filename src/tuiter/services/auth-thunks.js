@@ -10,7 +10,6 @@ export const loginThunk = createAsyncThunk(
 
 export const profileThunk = createAsyncThunk(
    "auth/profile", async () => {
-      console.log("Fetching user profile...");
       const currentUser = await authService.profile();
       return currentUser;
    }
