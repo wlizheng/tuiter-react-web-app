@@ -1,13 +1,16 @@
 import React from "react";
 import {
+   FaHeart,
    FaRegComment,
    FaRegShareSquare,
-   FaRetweet
+   FaRetweet, FaThumbsDown
 } from "react-icons/fa";
-import TuitLikesCounter from "./tuit-likes-counter";
+import {useDispatch} from "react-redux";
+import {updateTuitThunk} from "../services/tuits-thunks";
 
-const TuitStats = (props) => {
-   const {tuit} = props;
+const TuitStats = ({tuit}) => {
+   const dispatch = useDispatch();
+
    return (
       <li className="list-group-item border-0">
          <div className="row">
@@ -18,7 +21,21 @@ const TuitStats = (props) => {
                <FaRetweet className="me-2"/>{tuit.retuits}
             </div>
             <div className="col">
-               <TuitLikesCounter tuit={tuit}/>
+               <FaHeart
+                  className="text-danger"
+                  onClick={() =>
+                     dispatch(updateTuitThunk({ ...tuit, likes: tuit.likes + 1 }))
+                  }
+               />
+               <span className="ms-2">{tuit.likes}</span>
+            </div>
+            <div className="col">
+               <FaThumbsDown
+                  onClick={() =>
+                     dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes - 1 }))
+                  }
+               />
+               <span className="ms-2">{tuit.dislikes}</span>
             </div>
             <div className="col">
                <FaRegShareSquare/>

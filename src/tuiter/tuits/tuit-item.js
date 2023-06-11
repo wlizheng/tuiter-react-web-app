@@ -3,13 +3,12 @@ import TuitStats from "./tuit-stats";
 import {useDispatch} from "react-redux";
 import {deleteTuit} from "../reducers/tuits-reducer";
 import {BsXLg} from "react-icons/bs";
+import {deleteTuitThunk} from "../services/tuits-thunks";
 
-const TuitItem = (
-   {tuit = {}}
-) => {
+const TuitItem = ({tuit}) => {
    const dispatch = useDispatch();
    const deleteTuitHandler = (id) => {
-      dispatch(deleteTuit(id));
+      dispatch(deleteTuitThunk(id));
    }
 
    return (
@@ -18,7 +17,7 @@ const TuitItem = (
             <div className="col-1">
                <div>
                   <img className="rounded-circle" height={48}
-                       src={`/image/${tuit.image}`}/>
+                  src={`/image/${tuit.image}`}/>
                </div>
             </div>
             <div className="col">

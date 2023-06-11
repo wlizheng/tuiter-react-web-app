@@ -4,6 +4,7 @@ import {AiOutlinePicture, AiOutlineFileGif, AiFillSignal} from "react-icons/ai";
 import {CiLocationOn} from "react-icons/ci";
 import {createTuit} from "./reducers/tuits-reducer";
 import {useDispatch} from "react-redux";
+import {createTuitThunk} from "./services/tuits-thunks";
 
 const WhatsHappening = () => {
    let [whatsHappening, setWhatsHappening] = useState('');
@@ -13,10 +14,12 @@ const WhatsHappening = () => {
       const newTuit = {
          tuit: whatsHappening,
       };
-      dispatch(createTuit(newTuit));
-      setWhatsHappening("");
-      console.log(whatsHappening);
+      // dispatch(createTuit(newTuit));
+      // setWhatsHappening("");
+      // console.log(whatsHappening);
+      dispatch(createTuitThunk(newTuit));
    }
+
    return (
       <div className="row">
          <div className="col-auto">

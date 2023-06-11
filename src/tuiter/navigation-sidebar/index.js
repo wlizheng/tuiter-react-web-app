@@ -5,8 +5,10 @@ import {AiFillHome, AiFillMessage} from "react-icons/ai";
 import {
    FaHashtag, FaEnvelope, FaBookmark, FaList, FaUser
 } from "react-icons/fa";
+import {useSelector} from "react-redux";
 
 const NavigationSidebar = () => {
+   const {currentUser} = useSelector((state) => state.user);
    const {pathname} = useLocation();
    const [ignore, tuiter, active] = pathname.split("/");
    const links = [
@@ -34,6 +36,9 @@ const NavigationSidebar = () => {
                </div>
             </Link>
          )}
+         {!currentUser && <Link className="list-group" to="/tuiter/login">   Login   </Link>}
+         {!currentUser && <Link className="list-group" to="/tuiter/register">Register</Link>}
+         { currentUser && <Link className="list-group" to="/tuiter/profile"> Profile </Link>}
       </div>
    );
 };
