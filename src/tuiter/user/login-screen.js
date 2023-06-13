@@ -8,7 +8,7 @@ function LoginScreen() {
    const [password, setPassword] = useState("");
    const navigate = useNavigate();
    const dispatch = useDispatch();
-   const handelLogin = async () => {
+   const handleLogin = async () => {
       try {
          await dispatch(loginThunk({username, password}));
          navigate("/tuiter/profile");
@@ -31,7 +31,7 @@ function LoginScreen() {
                    onChange={(event) => setPassword(event.target.value)}/>
          </div>
          <button className="btn btn-primary mt-2"
-                 onClick={handelLogin}>
+                 onClick={handleLogin}>
             Login
          </button>
       </div>

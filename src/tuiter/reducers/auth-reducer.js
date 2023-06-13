@@ -20,9 +20,16 @@ const authSlice = createSlice({
       [profileThunk.fulfilled]: (state, {payload}) => {
          state.currentUser = payload;
       },
+      [profileThunk.rejected]: (state, {payload}) => {
+         state.currentUser = null;
+      },
+      [profileThunk.pending]: (state, action) => {
+         state.currentUser = null;
+      },
       [updateUserThunk.fulfilled]: (state, {payload}) => {
          state.currentUser = payload;
       },
+
       [registerThunk.fulfilled]: (state, {payload}) => {
          state.currentUser = payload;
       },

@@ -12,8 +12,8 @@ function ProfileScreen() {
    const [profile, setProfile] = useState(currentUser);
    const dispatch = useDispatch();
    const navigate = useNavigate();
-   const save = () => {
-      dispatch(updateUserThunk(profile));
+   const save = async () => {
+      await dispatch(updateUserThunk(profile));
    };
 
    useEffect(() => {
@@ -28,11 +28,11 @@ function ProfileScreen() {
    return (
       <div>
          <h1>Profile Screen</h1>
-         {profile && (
-            <div>
+         {profile && (<div>
                <div>
                   <label>Username</label>
-                  <input className="form-control w-75" type="text" value={profile.username}
+                  <input className="form-control w-75" type="text"
+                         value={profile.username}
                          onChange={(event) => {
                             const newProfile = {
                                ...profile, username: event.target.value,
@@ -63,15 +63,13 @@ function ProfileScreen() {
             </div>
          )}
          <button
-            className="btn btn-danger mt-2 me-3"
             onClick={() => {
                dispatch(logoutThunk());
                navigate("/tuiter/login");
             }}> Logout
          </button>
-         <button className="btn btn-success mt-2" onClick={save}>Save</button>
-      </div>
-   );
+         <button onClick={save}>Save</button>
+      </div>);
 }
 
 export default ProfileScreen;

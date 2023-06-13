@@ -5,8 +5,8 @@ const USERS_URL = `${SERVER_API_URL}/users`; // URL to auth controller
 
 const api = axios.create({withCredentials: true});
 
-export const login = async ({username, password}) => {
-   const response = await api.post(`${USERS_URL}/login`, {username, password});
+export const login = async ({ username, password }) => {
+   const response = await api.post(`${USERS_URL}/login`, { username, password });
    return response.data;
 };
 
@@ -16,8 +16,8 @@ export const logout = async () => {
 };
 
 export const profile = async () => {
-   const response = await api.get(`${USERS_URL}/profile`);
-   return response.data;
+   const response = await api.post(`${USERS_URL}/profile`);
+   return response;
 };
 
 export const updateUser = async (user) => {
