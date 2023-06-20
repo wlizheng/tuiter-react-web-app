@@ -11,6 +11,12 @@ import {updateTuitThunk} from "../services/tuits-thunks";
 const TuitStats = ({tuit}) => {
    const dispatch = useDispatch();
 
+   const handleDislikeClick = () => {
+      if (tuit.dislikes > 0) {
+         dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes - 1 }));
+      }
+   };
+
    return (
       <li className="list-group-item border-0">
          <div className="row">
@@ -31,9 +37,7 @@ const TuitStats = ({tuit}) => {
             </div>
             <div className="col">
                <FaThumbsDown
-                  onClick={() =>
-                     dispatch(updateTuitThunk({ ...tuit, dislikes: tuit.dislikes - 1 }))
-                  }
+                  onClick={handleDislikeClick}
                />
                <span className="ms-2">{tuit.dislikes}</span>
             </div>
